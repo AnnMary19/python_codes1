@@ -1,0 +1,12 @@
+import numpy as np
+ A=np.random.rand(1000,1000)
+ U ,S, V=np.linalg.svd(A)
+ r=[10,50,75,100,250,500,750]
+ error_list=[]
+ for i in r:
+   sigma=np.zeros((A.shape[0],A.shape[1]))
+   sigma[:i,:i] = np.diag(S[:i])
+   approx_A=U.dot(sigma.dot(V))
+   error =np.sum(np.square(A-approx_A))
+   error_list.append(error)
+   print(error_list)
