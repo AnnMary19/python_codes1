@@ -1,0 +1,5 @@
+def mysum(a,b):
+   c=a+b
+   return c
+d=mysum(2,3)
+print(d)
