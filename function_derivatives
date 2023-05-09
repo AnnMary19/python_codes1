@@ -1,0 +1,8 @@
+def derivatives(f,x,h=0.0001):
+  df=(f(x+h)-f(x-h))/(2.0*h)
+  ddf=(f(x+h)-2.0*f(x)+f(x-h))/h**2
+  return df,ddf
+from math import atan 
+df,ddf = derivatives(atan,0.5) 
+print('first derivative=',df)
+print('second derivative=',ddf)
