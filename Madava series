@@ -1,0 +1,9 @@
+import numpy as np
+import matplotlib.pyplot as plt
+m=[10,20,50,100]
+a=[]
+for i in m:
+   t=np.arange(0,i,1)
+   y=4*((-1)**(t)*(1/(2*t+1)))
+   sum=np.sum(y)
+print (sum)
